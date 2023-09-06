@@ -18,6 +18,10 @@ if (new == NULL)
 return (NULL);
 new->n = number;
 new->next = NULL;
+while (ptr->next != NULL && ptr->next->n < number)
+{
+ptr = ptr->next;
+}
 new->next = ptr->next;
 ptr->next = new;
 return (new);
