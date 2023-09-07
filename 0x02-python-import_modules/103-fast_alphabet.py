@@ -1,2 +1,3 @@
 #!/usr/bin/python3
-exec("from os import write;write(1,b'ABCDEFGHIJKLMNOPQRSTUVWXYZ\\n')")
+from sys import stdout
+stdout.write("ABCDEFGHIJKLMNOPQRSTUVWXYZ\n")
