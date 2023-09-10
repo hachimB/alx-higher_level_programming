@@ -4,12 +4,18 @@ def add_tuple(tuple_a=(), tuple_b=()):
     tuple_b = list(tuple_b)
     if (len(tuple_a) < 2):
         if (len(tuple_a) == 1):
+            if (tuple_a[0] is None):
+                tuple_a[0] = 0
+                tuple_a.append(0)
             tuple_a.append(0)
         else:
             tuple_a.append(0)
             tuple_a.append(0)
     elif (len(tuple_b) < 2):
         if (len(tuple_b) == 1):
+            if (tuple_b[0] is None):
+                tuple_b[0] = 0
+                tuple_b.append(0)
             tuple_b.append(0)
         else:
             tuple_b.append(0)
