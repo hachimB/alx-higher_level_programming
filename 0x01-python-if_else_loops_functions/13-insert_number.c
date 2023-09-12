@@ -15,6 +15,8 @@ if (*head == NULL)
 return (NULL);
 ptr = *head;
 new = malloc(sizeof(listint_t));
+if (new == NULL)
+return (NULL);
 new->n = number;
 new->next = NULL;
 while (ptr != NULL)
