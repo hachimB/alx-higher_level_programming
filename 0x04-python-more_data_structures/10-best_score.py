@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 def best_score(a_dictionary):
     max = 0
+    name = None
     if (a_dictionary is None):
         return (None)
     for key in a_dictionary:
