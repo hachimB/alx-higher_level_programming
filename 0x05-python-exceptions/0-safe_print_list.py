@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-try:
-    def safe_print_list(my_list=[], x=0):
+def safe_print_list(my_list=[], x=0):
+    try:
         count = 0
         list2 = []
         for c in my_list:
@@ -15,7 +15,8 @@ try:
             for i in list2:
                 print(i, end="")
             print()
+        if (count == 0):
+            i = 0
         return (i)
-
-except Exception as e:
-    print(e)
+    except Exception as e:
+        print(e)
