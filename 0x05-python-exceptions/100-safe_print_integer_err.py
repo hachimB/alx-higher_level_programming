@@ -5,7 +5,7 @@ import sys
 def safe_print_integer_err(value):
     try:
         if not(isinstance(value, int)):
-            raise Exception("Exception: Unknown format code 'd' \
+            raise Exception ("Exception: Unknown format code 'd'\
 for object of type 'str'\n")
         else:
             print("{:d}".format(value))
