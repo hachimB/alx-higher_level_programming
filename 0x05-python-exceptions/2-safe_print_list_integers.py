@@ -10,6 +10,9 @@ def safe_print_list_integers(my_list=[], x=0):
                 count += 1
                 print("{:d}".format(i), end="")
         print()
+        if (x > count):
+            raise IndexError
         return (count)
+
     except IndexError as e:
-        print(e)
+        raise e
