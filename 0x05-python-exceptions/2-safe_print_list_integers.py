@@ -1,13 +1,11 @@
 #!/usr/bin/python3
 def safe_print_list_integers(my_list=[], x=0):
     try:
-        if my_list is None:
-            my_list = []
         count = 0
         for c in my_list:
             count += 1
         if (x > count):
-            raise Exception
+            raise IndexError("list index out of range")
         count = 0
         for i in my_list[:x]:
             if (type(i) == int):
@@ -15,5 +13,5 @@ def safe_print_list_integers(my_list=[], x=0):
                 print("{:d}".format(i), end="")
         print()
         return (count)
-    except Exception as e:
+    except IndexError as e:
         print(e)
