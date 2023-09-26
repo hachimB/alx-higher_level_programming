@@ -2,6 +2,6 @@
 class Square:
     """Empty class named Square.
 
-this class doesnt do any thing.
-     """
+    This class doesn't do anything.
+    """
     pass
