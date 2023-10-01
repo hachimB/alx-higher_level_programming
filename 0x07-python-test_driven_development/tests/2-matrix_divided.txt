@@ -63,10 +63,6 @@ next test:
     Traceback (most recent call last):
     TypeError: div must be a number
 
-test when we have empty rows in the matrix and a positive div:
-    >>> matrix_divided([[], []], 12)
-    [[], []]
-
 test when we have empty rows in the matrix and a negative div:
     >>> matrix_divided([[]], -8)
     [[]]
@@ -94,3 +90,26 @@ test for empty matrix:
     >>> matrix_divided([[12, 23,"welcome", 45], [12, 23, 3, 5]], 12)
     Traceback (most recent call last):
     TypeError: matrix must be a matrix (list of lists)of integers/floats
+
+test for empty matrix:
+    >>> matrix_divided([], 2)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+test for matrix = None:
+    >>> matrix_divided(None, 2)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+test for matrix = list:
+    >>> matrix_divided([1,2,3], 2)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+test for float("inf"):
+    >>> matrix_divided([[12, 34], [12,5]], float("inf"))
+    [[0.0, 0.0], [0.0, 0.0]]
+
+next test for inf:
+    >>> matrix_divided([[12, 34], [float("inf"),5]], 4)
+    [[3.0, 8.5], [inf, 1.25]]

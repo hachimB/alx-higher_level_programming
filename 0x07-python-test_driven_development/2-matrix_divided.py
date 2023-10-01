@@ -4,6 +4,9 @@
 
 def matrix_divided(matrix, div):
     """matrix_divided function"""
+    if not matrix or not isinstance(matrix[0], list):
+        raise TypeError("matrix must be a matrix (list of lists) \
+of integers/floats")
     length = len(matrix[0])
     mtx = []
     if not (isinstance(div, (int, float))):
