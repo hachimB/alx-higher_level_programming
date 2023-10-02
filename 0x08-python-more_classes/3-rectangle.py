@@ -43,8 +43,8 @@ class Rectangle:
         return (perim)
 
     def __str__(self):
-        str = ""
+        s = ""
         if (self.width != 0 and self.height != 0):
             for i in range(self.height):
-                str += "#" * self.width + "\n"
-        return (str)
+                s += "#" * self.width + "\n"
+        return (s)
