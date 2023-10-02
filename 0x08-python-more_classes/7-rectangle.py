@@ -49,7 +49,7 @@ class Rectangle:
     def __str__(self):
         s = ""
         if (self.width != 0 and self.height != 0):
-            s = "\n".join(str(self.print_symbol * self.width) for i in
+            s = "\n".join(str(self.print_symbol) * self.width for i in
                           range(self.height))
         return (s)
 
