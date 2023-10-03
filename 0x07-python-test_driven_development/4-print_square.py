@@ -1,9 +1,15 @@
 #!/usr/bin/python3
-"""Module documentation"""
+"""Module documentation
+second line
+third line
+forth line
+"""
 
 
 def print_square(size):
-    """print_square function"""
+    """print_square function
+raises some errors when failed.
+"""
     if not (isinstance(size, int)):
         raise TypeError("size must be an integer")
     if (size < 0):

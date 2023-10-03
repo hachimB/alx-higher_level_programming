@@ -1,9 +1,15 @@
 #!/usr/bin/python3
-"""module doc"""
+"""module doc
+second line
+third line
+forth line
+"""
 
 
 def matrix_divided(matrix, div):
-    """matrix_divided function"""
+    """matrix_divided function
+raises some errors when failed
+"""
     if not matrix or not isinstance(matrix[0], list):
         raise TypeError("matrix must be a matrix (list of lists) \
 of integers/floats")

@@ -1,0 +1,62 @@
+The ``5-text_indentation`` module
+==================================
+
+using ``5-text_indentation``
+---------------------------
+
+import module:
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+test basic:
+    >>> text_indentation("Lorem ipsum ?dolor sit amet.")
+    Lorem ipsum ?
+    <BLANKLINE>
+    dolor sit amet.
+    <BLANKLINE>
+
+test without ":", "?", ".":
+    >>> text_indentation("Lorem ipsum dolor sit amet consectetur")
+    Lorem ipsum dolor sit amet consectetur
+
+test with \n:
+    >>> text_indentation("Lorem ipsum\ndolor sit amet consectetur")
+    Lorem ipsum
+    dolor sit amet consectetur
+
+second test with \n text:
+    >>> text_indentation("Lorem\n\nipsum?dolor sit amet.")
+    Lorem
+    <BLANKLINE>
+    ipsum?
+    <BLANKLINE>
+    dolor sit amet.
+    <BLANKLINE>
+
+test with an argument which is not a string:
+     >>> text_indentation(9)
+     Traceback (most recent call last):
+     TypeError: text must be a string
+
+test with list:
+    >>> text_indentation([1, 2, 3])
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+test with None:
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+test with nothing:
+    >>> text_indentation()
+    Traceback (most recent call last):
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+test with symbols:
+    >>> text_indentation(":.?")
+    :
+    <BLANKLINE>
+    .
+    <BLANKLINE>
+    ?
+    <BLANKLINE>
