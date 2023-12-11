@@ -1,7 +1,6 @@
 #!/usr/bin/node
 let i;
 const arr = process.argv.slice(2);
-console.log(arr);
 for (i = 0; i < arr.length; i++) {
   arr[i] = Number(arr[i]);
 }
