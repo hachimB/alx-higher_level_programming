@@ -11,14 +11,13 @@ class Square extends Rectangle {
     let i;
     let j;
     let row;
+    if (!c) {
+      c = 'X';
+    }
     for (i = 0; i < this.size; i++) {
       row = '';
       for (j = 0; j < this.size; j++) {
-        if (c) {
-          row += c;
-        } else {
-          row += 'X';
-        }
+        row += c;
       }
       console.log(row);
     }
