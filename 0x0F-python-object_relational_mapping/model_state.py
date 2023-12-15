@@ -2,10 +2,10 @@
 """Module documentation"""
 import sqlalchemy
 from sqlalchemy.ext.declarative import declarative_base
-import sys
 
 
 Base = declarative_base()
+
 
 class State(Base):
     """State class"""
@@ -14,6 +14,5 @@ class State(Base):
                 primary_key=True, nullable=False)
     name = sqlalchemy.Column(sqlalchemy.String(128), nullable=False)
 
-engine = sqlalchemy.create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.
-                                  format(sys.argv[1], sys.argv[2], sys.argv[3]))
-Base.metadata.create_all(engine)
+#engine = sqlalchemy.create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.
+#                                 format(sys.argv[1], sys.argv[2], sys.argv[3]))
