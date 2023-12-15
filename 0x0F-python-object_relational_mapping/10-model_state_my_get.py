@@ -19,6 +19,6 @@ if __name__ == "__main__":
     state_count = session.query(State).\
         filter(State.name.like(sys.argv[4])).order_by(State.id).count()
     if (state_count == 0):
-        print(Not found)
+        print('Not found')
     else:
         print(state_count)
