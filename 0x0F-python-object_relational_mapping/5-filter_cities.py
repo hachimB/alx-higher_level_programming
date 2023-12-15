@@ -14,11 +14,14 @@ if __name__ == "__main__":
                                  passwd=sys.argv[2],
                                  db=sys.argv[3])
     cur = connection.cursor()
-    query = "SELECT cities.name FROM cities JOIN states\
+    query = "SELECT cities.name FROM cities INNER JOIN states\
  ON cities.state_id = states.id WHERE states.name LIKE BINARY %s"
     cur.execute(query, (user_input,))
     rows = cur.fetchall()
+    city = []
     for row in rows:
-        print(row)
+        city.append(row[0])
+    r = ', '.join(city)
+    print(r)
     cur.close()
     connection.close()
