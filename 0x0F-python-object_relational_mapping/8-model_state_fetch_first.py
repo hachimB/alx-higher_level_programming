@@ -17,6 +17,7 @@ if __name__ == "__main__":
     session = Session()
 
     state = session.query(State).order_by(State.id).first()
-    if not state:
+    if session.query(State).order_by(State.id).count():
         print()
-    print("{}: {}".format(state.id, state.name))
+    else:
+        print("{}: {}".format(state.id, state.name))
