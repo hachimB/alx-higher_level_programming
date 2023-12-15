@@ -11,8 +11,7 @@ if __name__ == "__main__":
                                  port=3306,
                                  user=sys.argv[1],
                                  passwd=sys.argv[2],
-                                 db=sys.argv[3]
-                                 state=sys.argv[4])
+                                 db=sys.argv[3])
     cur = connection.cursor()
     cur.execute(
         "SELECT * FROM states WHERE name = '{}' ORDER BY id".
