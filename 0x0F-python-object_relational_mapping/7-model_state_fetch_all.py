@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """Module documentation"""
 from sqlalchemy import (create_engine)
-from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 import sys
 from model_state import Base, State
@@ -18,6 +17,5 @@ if __name__ == "__main__":
     session = Session()
 
     states = session.query(State).order_by(State.id)
-    print("Query executed.")
     for s in states:
         print("{}: {}".format(s.id, s.name))
