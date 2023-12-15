@@ -11,5 +11,5 @@ class State(Base):
     """State class"""
     __tablename__ = 'states'
     id = sqlalchemy.Column(sqlalchemy.Integer, autoincrement=True, unique=True,
-                primary_key=True, nullable=False)
+                           primary_key=True, nullable=False)
     name = sqlalchemy.Column(sqlalchemy.String(128), nullable=False)
