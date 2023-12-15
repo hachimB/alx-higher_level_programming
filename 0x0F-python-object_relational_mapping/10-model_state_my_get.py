@@ -16,8 +16,8 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    state_count = session.query(State)
-    .filter(State.name.like(sys.argv[4])).order_by(State.id).count()
+    state_count = session.query(State).\
+        filter(State.name.like(sys.argv[4])).order_by(State.id).count()
     if (state_count == 0):
         print(Not found)
     else:
