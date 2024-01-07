@@ -14,3 +14,4 @@ if __name__ == '__main__':
         - utf8 content: {}""".format(type(content), content, utf8_content)
 
     print(display)
+
